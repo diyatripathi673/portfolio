@@ -1,37 +1,27 @@
-// import React from "react";
-// import Wrap from "./components/wrap/Wrap";
-
-// const App = () => {
-//   return (
-//     <div>
-//       {/* Background Animation */}
-//       <Wrap />
-
-//       {/* Content */}
-//       <div style={{ position: "relative", zIndex: 1, color: "white" }}>
-//         <h1 style={{ padding: "20px" }}>Hey I'm Diya 👋</h1>
-
-//         {/* Scroll test */}
-//         <div style={{ height: "200vh", padding: "20px" }}>
-//           Scroll karke dekh 👇
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
-
 import React from "react";
 // import Background from "./components/background/Background";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import Cursor from "./components/Cursor";
 const App = () => {
   return (
     <>
-      <Navbar />
+      <Cursor />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
 
-      <Home />
+          <Route path="*" element={<h1>404 Page Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

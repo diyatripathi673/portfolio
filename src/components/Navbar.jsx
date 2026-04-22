@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,13 +14,54 @@ const Navbar = () => {
       flex justify-center items-center
       text-white 
       rounded-full shadow-md 
-      border border-white
-      bg-white/10 backdrop-blur-md"
+      border-[1.3px] border-dashed border-gray-500
+ hover:border-purple-400 transition
+bg-black/40 backdrop-blur-md"
     >
       <ul className="flex gap-10 items-center">
-        <li className="cursor-pointer hover:text-gray-400">Home</li>
-        <li className="cursor-pointer hover:text-gray-400">Projects</li>
-        <li className="cursor-pointer hover:text-gray-400">Contact</li>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-purple-400" : "hover:text-gray-400"
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              isActive ? "text-purple-400" : "hover:text-gray-400"
+            }
+          >
+            Projects
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/experience"
+            className={({ isActive }) =>
+              isActive ? "text-purple-400" : "hover:text-gray-400"
+            }
+          >
+            Experience
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "text-purple-400" : "hover:text-gray-400"
+            }
+          >
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </motion.nav>
   );
