@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import Projects from "./Projects";
+import Experience from "./Experience";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -138,6 +140,8 @@ const Home = () => {
 
       {/* PROJECTS */}
       <Projects />
+      <Experience />
+      <Contact />
     </div>
   );
 };

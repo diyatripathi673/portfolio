@@ -11,6 +11,7 @@ const App = () => {
   return (
     <>
       <Cursor />
+
       <BrowserRouter>
         <Navbar />
         <Routes>
