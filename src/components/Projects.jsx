@@ -115,8 +115,8 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "LMS Web App",
-    tech: "React, Node.js, MongoDB, Clerk",
-    link: "#",
+    tech: "React, Node.js, MongoDB, Tailwind CSS, Clerk,Stripe,Cloudinary",
+    link: "https://lms-wzop.vercel.app/",
     desc: "Full-stack Learning Management System for course creation and student enrollment.",
     points: [
       "Secure authentication using Clerk",
@@ -127,11 +127,11 @@ const projects = [
   },
   {
     title: "AI Movie App",
-    tech: "React, APIs",
-    link: "#",
+    tech: "React, APIs,Gemini, Tailwind CSS",
+    link: "https://movie-recomandation-feature-gemini-eight.vercel.app/",
     desc: "Movie recommendation app using real-time API data.",
     points: [
-      "Integrated external movie APIs",
+      "Integrated  Gemini APIs",
       "Real-time data fetching",
       "Optimized state management",
       "Responsive UI design",
@@ -180,14 +180,20 @@ const Projects = () => {
             className="group relative flex flex-col gap-4 p-5 rounded-lg 
             border border-dashed border-gray-600 
             bg-gradient-to-bl from-gray-900/40 to-black/40
-            hover:from-gray-800/60 hover:border-purple-400/60
+            hover:from-gray-800/60 hover:border-amber-400
+/60
             transition-all duration-300"
           >
             {/* 🔥 TOP ROW */}
             <div className="flex justify-between items-start">
               <p>
                 &gt; project:{" "}
-                <span className="text-purple-400">{project.title}</span>
+                <span
+                  className="text-amber-400
+"
+                >
+                  {project.title}
+                </span>
               </p>
 
               {/* 🔥 OPEN LINK TOP RIGHT */}
@@ -195,7 +201,8 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm md:text-base text-purple-400 font-medium 
+                className="text-sm md:text-base text-amber-400
+ font-medium 
 opacity-80 group-hover:opacity-100 hover:underline transition"
               >
                 open ↗

@@ -2,15 +2,17 @@ import { motion } from "framer-motion";
 import Projects from "./Projects";
 import Experience from "./Experience";
 import Contact from "./Contact";
-
+import TechStcak from "./TechStack";
+import AnimatedPhoto from "./AnimatedPhoto";
 const Home = () => {
   return (
-    <div className="mt-28 text-white px-10">
+    <div className="mt-26 text-white px-10">
       <div
         className="flex flex-col md:flex-row items-center gap-16 
   border border-dashed border-gray-400
-  p-6 md:p-8
-  hover:border-purple-400 
+  p-4 md:p-6
+  hover:border-amber-400
+ 
   transition duration-300"
       >
         {/* LEFT SIDE */}
@@ -22,7 +24,12 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="text-4xl md:text-5xl font-bold mb-4 leading-tight"
           >
-            <span className="font-mono text-purple-400">&gt; di@_trip@thi</span>
+            <span
+              className="font-mono text-amber-400
+"
+            >
+              &gt; di@_trip@thi
+            </span>
           </motion.h1>
 
           {/* ROLE */}
@@ -70,9 +77,11 @@ const Home = () => {
                   transition={{ delay: i * 0.15 }}
                   className="
                     px-4 py-1 
-                    border border-[1px] border-dashed border-purple-400/40
+                    border  border-dashed border-gray-400/40
+/40
                     rounded-full text-sm
-                    hover:border-purple-400 
+                    hover:border-amber-400
+
                     transition duration-300
                   "
                 >
@@ -89,56 +98,13 @@ const Home = () => {
         <div className="w-full md:w-1/2 flex justify-center relative">
           {/* BACKGROUND GLOW */}
           <div className="absolute w-72 h-72 bg-purple-500/10 blur-3xl rounded-full"></div>
-
+          <AnimatedPhoto />
           {/* SVG */}
-          <motion.svg
-            width="320"
-            height="220"
-            viewBox="0 0 300 200"
-            className="relative opacity-90"
-            whileHover={{ scale: 1.05 }}
-          >
-            {/* < */}
-            <motion.path
-              d="M 100 40 L 60 100 L 100 160"
-              stroke="#c084fc"
-              className="drop-shadow-[0_0_10px_#c084fc]"
-              strokeWidth="8"
-              strokeLinecap="round"
-              fill="transparent"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1 }}
-            />
-
-            {/* > */}
-            <motion.path
-              d="M 200 40 L 240 100 L 200 160"
-              stroke="#c084fc"
-              className="drop-shadow-[0_0_10px_#c084fc]"
-              strokeWidth="8"
-              strokeLinecap="round"
-              fill="transparent"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            />
-
-            {/* / */}
-            <motion.path
-              d="M 150 40 L 150 160"
-              stroke="#e9d5ff"
-              strokeWidth="6"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1, delay: 1 }}
-            />
-          </motion.svg>
         </div>
       </div>
 
       {/* PROJECTS */}
+      <TechStcak />
       <Projects />
       <Experience />
       <Contact />

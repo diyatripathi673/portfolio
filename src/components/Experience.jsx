@@ -14,14 +14,19 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="
-              border border-dashed border-purple-400/30
+              border border-dashed border-amber-400
+/30
               bg-black/30 backdrop-blur-md
               p-6 md:p-8 rounded-xl
-              hover:border-purple-400
+              hover:border-amber-400
+
               transition duration-300
             "
           >
-            <h3 className="text-xl font-semibold text-purple-400">
+            <h3
+              className="text-xl font-semibold text-amber-400
+"
+            >
               Software Developer Intern
             </h3>
 
@@ -48,10 +53,13 @@ const Experience = () => {
                   key={i}
                   className="
                     text-xs px-3 py-1
-                    border border-dashed border-purple-400/40
-                    text-purple-400
+                    border border-dashed border-amber-400
+/40
+                    text-amber-400
+
                     rounded-full
-                    hover:border-purple-400
+                    hover:border-amber-400
+
                     transition
                   "
                 >
@@ -67,14 +75,19 @@ const Experience = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="
-              border border-dashed border-purple-400/30
+              border border-dashed border-amber-400
+/30
               bg-black/30 backdrop-blur-md
               p-6 md:p-8 rounded-xl
-              hover:border-purple-400
+              hover:border-amber-400
+
               transition duration-300
             "
           >
-            <h3 className="text-xl font-semibold text-purple-400">
+            <h3
+              className="text-xl font-semibold text-amber-400
+"
+            >
               Help Drive (Donation Platform)
             </h3>
 
@@ -94,10 +107,13 @@ const Experience = () => {
                   key={i}
                   className="
                     text-xs px-3 py-1
-                    border border-dashed border-purple-400/40
-                    text-purple-400
+                    border border-dashed border-amber-400
+/40
+                    text-amber-400
+
                     rounded-full
-                    hover:border-purple-400
+                    hover:border-amber-400
+
                     transition
                   "
                 >
